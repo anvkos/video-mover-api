@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // fixed Specified key was too long
+        // https://github.com/laravel/framework/issues/17508
+        Schema::defaultStringLength(191);
     }
 
     /**
