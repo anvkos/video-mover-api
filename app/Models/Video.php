@@ -15,4 +15,9 @@ class Video extends Model
     {
         return $this->belongsTo(VideoFile::class, 'file_id', 'id');
     }
+
+    public function videoCounter()
+    {
+        return $this->hasOne(VideoCounter::class);
+    }
 }
