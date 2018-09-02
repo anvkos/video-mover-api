@@ -58,7 +58,7 @@ class Task extends Model
 
     public function criteria()
     {
-        return $this->hasMany(TaskCriterion::class)->withTimestamps();
+        return $this->hasMany(TaskCriterion::class);
     }
 
     public function sourceStorages()
