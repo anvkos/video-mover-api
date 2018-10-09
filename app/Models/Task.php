@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Storage;
+use App\Models\Operation;
 use App\Models\StorageTask;
 use App\Models\TaskCriterion;
 use Illuminate\Database\Eloquent\Model;
@@ -59,6 +60,11 @@ class Task extends Model
     public function criteria()
     {
         return $this->hasMany(TaskCriterion::class);
+    }
+
+    public function operations()
+    {
+        return $this->hasMany(Operation::class);
     }
 
     public function sourceStorages()

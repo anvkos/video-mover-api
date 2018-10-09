@@ -34,7 +34,6 @@ class TasksController extends Controller
      */
     public function store(CreateRequest $request)
     {
-        $task = Task::find(7);
         $service = new CreateTaskService();
         $task = $service->perform($request->only([
             'title', 'enabled', 'action', 'number_files', 'size_files', 'src_storage_ids', 'dst_storage_ids', 'criteria'
