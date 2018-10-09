@@ -10,6 +10,8 @@ class StorageTask extends Model
     public const KIND_SOURCE = 'source';
     public const KIND_DESTINATION = 'destination';
 
+    protected $table = 'storage_storages_tasks';
+
     protected $fillable = [
         'storage_id', 'kind',
     ];
